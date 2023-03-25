@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card">
+                    <img class="card-img-top" src="{{ post.get_image_url }}" alt="{{ post.title }}">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <a href="{% url 'profile' post.author.id %}" class="text-muted">
+                                {{ post.author }}
+                            </a>
+                        </div>
+                        <p>{{ post.review }}</p>
+                        {% for comment in post.comments.all %}
+                            <div class="card border border-0">
+                                <div class="card-body">
+                                    <p class="card-title fw-semibold">{{ comment.author.username }}</p>
+                                    <p class="card-text">{{ comment.text }}</p>
+                                    <p class="card-text"><small
+                                            class="text-muted">{{ comment.created_at|timesince }} ago</small></p>
+                                </div>
+                            </div>
+                        {% empty %}
+                            <p>No comments yet.</p>
+                        {% endfor %}
+                    </div>
+                    <div class="card-footer border border-0 bg-white">
+                        <p class="card-text"><small class="text-muted">{{ post.created_at|timesince }} ago</small></p>
+                    </div>
+                </div>
+                {% if user.is_authenticated %}
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Add a comment</h5>
+                            <form method="POST">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button type="submit" class="btn btn-primary btn-circle">
+                                    <iconify-icon icon="wpf:sent"></iconify-icon>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

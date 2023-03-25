@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block titleblock %}User Profile{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-3 p-5">
+                <img src="{% if user_obj.profile.avatar %}
+                            {{ user_obj.profile.avatar.url }}
+                             {% else %}/static/img/default-profile-picture.jpg{% endif %}"
+                     class="rounded-circle" style="height: 150px;">
+            </div>
+            <div class="col-9 pt-5">
+                <div class="d-flex flex-row">
+                    <div class="p-2 d-flex align-content-center">
+                        <h1>{{ user_obj.username }}</h1>
+                    </div>
+                </div>
+                <div class="d-flex flex-row">
+                    <div class="p-2"><strong>{{ user_obj.posts.count }}</strong> posts</div>
+                </div>
+                <div class="d-flex flex-row">
+                    <div class="p-2 font-weight-bold">
+                        <strong>{{ user_obj.first_name|capfirst }}.{{ user_obj.last_name|slice:":1"|upper }}</strong>
+                    </div>
+                    <div class="p-2">
+                        <span>{{ user_obj.email }}</span>
+                    </div>
+                </div>
+                {% if user.is_authenticated and user.id == user_obj.id %}
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-link link-underline link-underline-opacity-0">
+                            <a href="{% url 'update' user.pk %}"
+                               class="link-underline link-underline-opacity-0 text-muted">Edit</a>
+                        </button>
+                        <button type="button" class="btn btn-link link-underline link-underline-opacity-0"><a
+                                href="{% url 'signout' %}" class="link-underline link-underline-opacity-0 text-muted">Sign
+                            Out</a>
+                        </button>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row pt-5">
+            {% for post in user_obj.posts.all %}
+                <div class="col-4 g-5">
+                    <img src="{{ post.image.url }}" class="w-100 h-75">
+                </div>
+            {% empty %}
+                <div class="col-12 text-center">
+                    <p>No posts yet</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
