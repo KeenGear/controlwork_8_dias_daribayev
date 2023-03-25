@@ -1,0 +1,72 @@
+[
+{
+    "model": "review_app.post",
+    "pk": 1,
+    "fields": {
+        "title": "Review post 1",
+        "slug": "review_post_1",
+        "status": "Not Moderated",
+        "image": "static/img/grey_pic.jpg",
+        "review": "ads lmasmdlaskmdlkasmd",
+        "created_at": "2023-03-25T06:12:00.282Z",
+        "updated_at": "2023-03-25T10:36:51.622Z",
+        "author": 2
+    }
+},
+{
+    "model": "review_app.post",
+    "pk": 2,
+    "fields": {
+        "title": "Tech review 1",
+        "slug": "tech_review_1",
+        "status": "Moderated",
+        "image": "uploads/user_2/pexels-ææ-e-2399840.jpg",
+        "review": "kasmdklasmdlasmldk",
+        "created_at": "2023-03-25T06:59:39.579Z",
+        "updated_at": "2023-03-25T09:24:14.864Z",
+        "author": 2
+    }
+},
+{
+    "model": "review_app.post",
+    "pk": 4,
+    "fields": {
+        "title": "asdasdas",
+        "slug": "asdasdas",
+        "status": "Moderated",
+        "image": "uploads/user_2/mehdi-messrro-iNFMfq7qxcQ-unsplash.jpg",
+        "review": "asdasddasdasdasdasd",
+        "created_at": "2023-03-25T10:28:12.251Z",
+        "updated_at": "2023-03-25T10:29:59.561Z",
+        "author": 2
+    }
+},
+{
+    "model": "review_app.post",
+    "pk": 5,
+    "fields": {
+        "title": "Nothing Phone",
+        "slug": "nothing-phone",
+        "status": "Moderated",
+        "image": "uploads/user_2/5dy85ovm4yx7rv7j9qeikf96p19eo9fy.jpg",
+        "review": "kansdlkasndlkasndlkansdlansd",
+        "created_at": "2023-03-25T10:32:12.225Z",
+        "updated_at": "2023-03-25T10:32:40.380Z",
+        "author": 2
+    }
+},
+{
+    "model": "review_app.post",
+    "pk": 6,
+    "fields": {
+        "title": "Шоколад Сникерс Супер 95 гр",
+        "slug": "95",
+        "status": "Moderated",
+        "image": "uploads/user_3/136004002_w640_h640_0739-shokolad-snikers.jpg.webp",
+        "review": "Шоколад",
+        "created_at": "2023-03-25T10:36:22.100Z",
+        "updated_at": "2023-03-25T10:36:43.839Z",
+        "author": 3
+    }
+}
+]

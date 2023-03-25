@@ -1,0 +1,11 @@
+[
+{
+    "model": "users_app.userprofile",
+    "pk": 1,
+    "fields": {
+        "user": 2,
+        "avatar": "",
+        "birth_date": "1997-09-17"
+    }
+}
+]

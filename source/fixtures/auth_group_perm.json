@@ -1,0 +1,98 @@
+[
+{
+    "model": "auth.group_permissions",
+    "pk": 1,
+    "fields": {
+        "group": 1,
+        "permission": 32
+    }
+},
+{
+    "model": "auth.group_permissions",
+    "pk": 2,
+    "fields": {
+        "group": 1,
+        "permission": 33
+    }
+},
+{
+    "model": "auth.group_permissions",
+    "pk": 3,
+    "fields": {
+        "group": 1,
+        "permission": 34
+    }
+},
+{
+    "model": "auth.group_permissions",
+    "pk": 4,
+    "fields": {
+        "group": 1,
+        "permission": 35
+    }
+},
+{
+    "model": "auth.group_permissions",
+    "pk": 5,
+    "fields": {
+        "group": 1,
+        "permission": 36
+    }
+},
+{
+    "model": "auth.group_permissions",
+    "pk": 6,
+    "fields": {
+        "group": 1,
+        "permission": 37
+    }
+},
+{
+    "model": "auth.group_permissions",
+    "pk": 7,
+    "fields": {
+        "group": 1,
+        "permission": 38
+    }
+},
+{
+    "model": "auth.group_permissions",
+    "pk": 8,
+    "fields": {
+        "group": 1,
+        "permission": 39
+    }
+},
+{
+    "model": "auth.group_permissions",
+    "pk": 9,
+    "fields": {
+        "group": 1,
+        "permission": 40
+    }
+},
+{
+    "model": "auth.group_permissions",
+    "pk": 10,
+    "fields": {
+        "group": 1,
+        "permission": 29
+    }
+},
+{
+    "model": "auth.group_permissions",
+    "pk": 11,
+    "fields": {
+        "group": 1,
+        "permission": 30
+    }
+},
+{
+    "model": "auth.group_permissions",
+    "pk": 12,
+    "fields": {
+        "group": 1,
+        "permission": 31
+    }
+}
+]
